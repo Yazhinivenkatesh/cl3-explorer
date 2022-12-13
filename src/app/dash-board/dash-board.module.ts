@@ -1,20 +1,20 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TopNavRoutingModule } from './top-nav-routing.module';
-import { TopNavComponent } from './top-nav.component';
+import { DashBoardRoutingModule } from './dash-board-routing.module';
+import { DashBoardComponent } from './dash-board.component';
 
 
 @NgModule({
   declarations: [
-    TopNavComponent
+    DashBoardComponent
   ],
   imports: [
     CommonModule,
-    TopNavRoutingModule, 
+    DashBoardRoutingModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
 })
-export class TopNavModule { }
+export class DashBoardModule { }

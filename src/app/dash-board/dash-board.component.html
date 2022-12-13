@@ -1,0 +1,26 @@
+<div>
+    <app-top-nav></app-top-nav>
+</div>
+<div class="d-flex justify-content-end">
+    <mat-card class="calib-card border border-radius shadow">
+        <mat-card-title>
+            Height: {{latestBlockHeight}}
+        </mat-card-title>
+        <div class="line"></div>
+        <mat-card-title class="mt-3">
+            Total Transactions : {{txCount}}
+        </mat-card-title>
+    </mat-card>
+    <mat-card class="calib-card border border-radius shadow">
+        <!-- <mat-card-header> -->
+            <mat-card-title>Calib Chain</mat-card-title>
+        <!-- </mat-card-header> -->
+        <mat-card-content>
+            <p>Calibchain is an interoperable smart contract network. Highly scalable, robust, secure and easy to deploy
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div>
+    <app-transaction></app-transaction>
+</div>

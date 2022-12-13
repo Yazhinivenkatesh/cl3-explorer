@@ -1,26 +1,17 @@
 <mat-toolbar color="primary"> <span>Calib Explorer</span>
-    <!-- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="search-tx">
                 <input class="form-control" type="text" name="search" autocomplete="off"
                     placeholder="&#61442;  Start searching for a transactions by address or hash">
             </div>
         </div>
-    </div> -->
-    <div class="input-group">
-        <form>
-          <input #input mdbInput type="search" id="form1" class="form-control" />
-          <label mdbLabel class="form-label" for="form1">Search</label>
-        </form>
-        <button type="button" class="btn btn-primary" (click)="search(input.value)">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
+    </div>
     <span class="spacer"></span>
-    <nav>
-        <a class="nav-link" mat-button>Dashboard</a>
-        <a class="nav-link" mat-button>Transactions</a>
-        <a class="nav-link" mat-button>Blocks</a>
-    </nav>
+    <ul>
+        <li><a mat-button>Dashboard</a></li>
+        <li><a mat-button>Transactions</a></li>
+        <li><a mat-button>Blocks</a></li>
+    </ul>
 
 </mat-toolbar>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashBoardComponent } from './dash-board/dash-board.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 
 const routes: Routes = [
@@ -7,7 +8,11 @@ const routes: Routes = [
     path: 'nav',
     component: TopNavComponent,
   },
-  { path: '', redirectTo: '/nav', pathMatch: 'full' },
+  {
+    path: 'dashboard',
+    component: DashBoardComponent,
+  },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({

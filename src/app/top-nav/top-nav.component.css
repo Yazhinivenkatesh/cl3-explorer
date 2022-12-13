@@ -1,17 +1,30 @@
-.mat-toolbar{
-    background-color: cornflowerblue;
-    color: white;
-  }
-  .mat-button{
-     color: white;
-  }
-  .spacer{
-    flex: 1 1 auto;
-  }
-  .nav-link { 
-    margin: 0 20px; 
-    padding: 0 10px; 
-} 
+.mat-toolbar {
+  background-color: cornflowerblue;
+  color: white;
+}
+.mat-button {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+  /* float: left; */
+}
+
+li a {
+  /* display: block; */
+  padding: 15px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
 
 .container {
   padding-top: 50px;
@@ -22,12 +35,12 @@
 .search-tx {
   max-width: 500px;
   padding-bottom: 50px;
-  margin:auto;
+  margin: auto;
 }
 
 .form-control {
-  box-shadow: 0 10px 40px 0 #B0C1D9;
+  box-shadow: 0 10px 40px 0 #b0c1d9;
 }
-.form-control::placeholder  {
+.form-control::placeholder {
   font-family: FontAwesome;
 }
