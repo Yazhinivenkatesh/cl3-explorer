@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="search-tx">
-                <input class="form-control" type="text" name="search" autocomplete="off"
+                <input (keyup)="onSubmit($event)" [(ngModel)]="searchValue" class="form-control" type="text" name="search" autocomplete="off"
                     placeholder="&#61442;  Start searching for a transactions by address or hash">
             </div>
         </div>
@@ -15,3 +15,5 @@
     </ul>
 
 </mat-toolbar>
+
+<!-- <app-transaction [searchValue]="searchValue"></app-transaction> -->

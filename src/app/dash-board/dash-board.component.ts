@@ -11,18 +11,19 @@ export class DashBoardComponent implements OnInit {
 
   latestBlockHeight: number = 0;
   txCount: number = 0;
+  tableName1: string = "tx-table";
+  tableName2: string = "block-table"
 
   constructor( private userService: UserService) { }
 
   getTxCount = () => {
     this.userService.getTxCount().subscribe((response:ApiResponse ) => {
-      console.log(response, "RESPONSE..............")
       this.latestBlockHeight = response?.data.latestBlockHeight;
       this.txCount = response?.data?.txCount;
     })
   }
 
   ngOnInit(): void {
-    setInterval(() => this.getTxCount(), 10000)
+    setInterval(() => this.getTxCount(), 2000)
   }
 }

@@ -12,15 +12,17 @@
         </mat-card-title>
     </mat-card>
     <mat-card class="calib-card border border-radius shadow">
-        <!-- <mat-card-header> -->
             <mat-card-title>Calib Chain</mat-card-title>
-        <!-- </mat-card-header> -->
         <mat-card-content>
             <p>Calibchain is an interoperable smart contract network. Highly scalable, robust, secure and easy to deploy
             </p>
         </mat-card-content>
     </mat-card>
 </div>
-<div>
-    <app-transaction></app-transaction>
+
+<div> 
+    <app-table [tableName1]="tableName1"></app-table>
+    <br>
+    <app-table [tableName1]="tableName2"></app-table>
 </div>
+

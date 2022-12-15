@@ -12,14 +12,20 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { MatCardModule } from "@angular/material/card";
 import { HttpClientModule } from '@angular/common/http';
-import { TransactionComponent } from './transaction/transaction.component';
+import {HashDetailsComponent} from './hash-details/hash-details.component'
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table'
+import { MatButtonModule } from '@angular/material/button';  
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
     DashBoardComponent,
-    TransactionComponent
+    HashDetailsComponent,
+    TableComponent,
+    TransactionListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,9 @@ import { TransactionComponent } from './transaction/transaction.component';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatButtonModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
