@@ -1,0 +1,31 @@
+.account-title {
+    font-family: FontAwesome;
+    font-size: 22px;
+}
+
+.address-card {
+    width: 350px;
+    height: 300px;
+    font-family: FontAwesome;
+    background-color: black;
+    color: white
+}
+
+.mat-card p {
+    font-size: 15px;
+    color: blanchedalmond;
+}
+.mat-card h3 {
+    font-family: FontAwesome;
+    font-size: 18px;
+}
+
+.balance-card{
+    width: 690px;
+    margin-left: 20px;
+    font-family: FontAwesome;
+}
+
+.asset-table {
+    width: 600px;
+}

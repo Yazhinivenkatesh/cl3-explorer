@@ -81,3 +81,26 @@ export const BLOCKLIST_SCHEMA = [
         label: 'Time'
     }
 ]
+
+export const ASSET_SCHEMA = [
+    {
+        key: 'name',
+        label: 'Name'
+    },
+    {
+        key: 'amount',
+        label: 'Amount'
+    },
+    {
+        key: 'totalValue',
+        label: 'Total Value'
+    }
+]
+
+export const txColumns = ['txHash', 'type', 'height', 'timeStamp'];
+export const blockColumns = ['height', 'txs', 'timeStamp'];
+
+export const txListColumns = ['txHash', 'type', 'status',  'fee', 'height', 'timeStamp', 'amount'];
+export const blockListColumns = ['height', 'blockHash', 'txs', 'timeStamp'];
+
+export const assetColumns = ['name', 'amount', 'totalValue'];

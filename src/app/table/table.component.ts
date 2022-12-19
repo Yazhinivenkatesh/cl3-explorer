@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../../lib/apis/user.service';
 import {
   ApiResponse,
-  txData,
-  blockData,
+  TxData,
+  BlockData,
 } from '../../lib/interfaces/common-interfaces';
 import {TX_COLUMNS_SCHEMA, BLOCK_COLUMNS_SCHEMA} from '../../lib/constants/common-constants'
 import { MatTableDataSource } from '@angular/material/table';
@@ -28,14 +28,14 @@ export class TableComponent implements OnInit {
   @Input() tableName1: string = '';
   txColumns: string[] = ['txHash', 'type', 'height', 'timeStamp'];
   blockColumns: string[] = ['height', 'txs', 'timeStamp'];
-  txDataSource!: MatTableDataSource<txData>;
-  blockDataSource!: MatTableDataSource<blockData>;
+  txDataSource!: MatTableDataSource<TxData>;
+  blockDataSource!: MatTableDataSource<BlockData>;
 
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
-  txDetails!: txData;
-  blockDetails!: blockData;
-  txArray: txData[] = [];
-  blockArray: blockData[] = [];
+  txDetails!: TxData;
+  blockDetails!: BlockData;
+  txArray: TxData[] = [];
+  blockArray: BlockData[] = [];
   changeDataSource!: any;
   changeColumns: string[] = [];
   columnsSchema: any;
@@ -85,6 +85,5 @@ export class TableComponent implements OnInit {
       this.blockArray.push(this.blockDetails);
     });
     this.blockDataSource = new MatTableDataSource(this.blockArray);
-    console.log(this.blockDataSource, 'blockDetails');
   }
 }

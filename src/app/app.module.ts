@@ -17,6 +17,9 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table'
 import { MatButtonModule } from '@angular/material/button';  
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CommonTableComponent } from './common-table/common-table.component';
+import { AddressDetailsComponent } from './address-details/address-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
     DashBoardComponent,
     HashDetailsComponent,
     TableComponent,
-    TransactionListComponent
+    TransactionListComponent,
+    CommonTableComponent,
+    AddressDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
     HttpClientModule,
     MatTableModule,
     MatButtonModule,
+    MatTabsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -34,7 +34,7 @@ export class HashDetailsComponent implements OnInit {
   }
 
   getHashDetails (): void{
-    this.userService.getWalletAddress(this.searchValue).subscribe((response: ApiResponse)=>{
+    this.userService.getTxDetails(this.searchValue).subscribe((response: ApiResponse)=>{
       this.chainId = get(response, 'data.chainId', '');
       this.txHash = get(response, 'data.txHash', '');
       this.status = get(response, 'data.status', '');

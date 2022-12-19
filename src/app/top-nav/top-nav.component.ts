@@ -25,13 +25,24 @@ export class TopNavComponent implements OnInit {
       const value = this.searchValue;
       // const test = Validators.pattern('^[a-fA-F0-9]{64}$')
       // const test = value.match(this.pattern);
-      this.router.navigate(['hash-txs'], {
-        relativeTo: this.route,
-        queryParams: {
-          'value': this.searchValue,
-        },
-        queryParamsHandling: 'merge',
-      });
+      if(this.searchValue.includes("calib")){
+        this.router.navigate(['address'], {
+          relativeTo: this.route,
+          queryParams: {
+            'value': this.searchValue,
+          },
+          queryParamsHandling: 'merge',
+        })
+      }else{
+        this.router.navigate(['hash-txs'], {
+          relativeTo: this.route,
+          queryParams: {
+            'value': this.searchValue,
+          },
+          queryParamsHandling: 'merge',
+        });
+      }
+      
     }
   }
 

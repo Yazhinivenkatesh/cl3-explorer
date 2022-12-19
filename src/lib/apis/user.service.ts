@@ -3,11 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiResponse } from '../interfaces/common-interfaces';
 import { environment } from 'src/environments/environment';
-import {replace} from 'lodash'
+import {replace} from 'lodash';
+
 const user = {
   getTxCount: 'getCount',
   getTxHashDetails: 'getDetailsByHash/{txHash}',
-  getLatestTxs: 'getLatestTransactions/'
+  getLatestTxs: 'getLatestTransactions/',
+  getWalletDetails: 'getDetailsByAddress/{walletAddress}'
 };
 
 @Injectable({
@@ -36,7 +38,7 @@ export class UserService {
     return this.getApi(url);
   }
 
-  getWalletAddress(txHash: string): Observable<ApiResponse> {
+  getTxDetails(txHash: string): Observable<ApiResponse> {
     const str = replace(user.getTxHashDetails, '{txHash}', txHash);
     const url = `${this.baseUrl}${str}`
     return this.getApi(url);
@@ -45,6 +47,12 @@ export class UserService {
   getLatestTransactions(limit: number): Observable<ApiResponse> {
     const url = `${this.baseUrl}${user.getLatestTxs}${limit}`
     return this.getApi(url)
+  }
+
+  getWalletDetails(walletAddress: string): Observable<ApiResponse>{
+    const str = replace(user.getWalletDetails, '{walletAddress}', walletAddress);
+    const url = `${this.baseUrl}${str}`;
+    return this.getApi(url);
   }
 
 }

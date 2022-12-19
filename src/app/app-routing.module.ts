@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddressDetailsComponent } from './address-details/address-details.component';
+import { CommonTableComponent } from './common-table/common-table.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { HashDetailsComponent } from './hash-details/hash-details.component';
 import { TableComponent } from './table/table.component';
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: 'tx-list',
     component: TransactionListComponent
+  },
+  {
+    path: 'address',
+    component: AddressDetailsComponent
+  },
+  {
+    path: 'common-table',
+    component: CommonTableComponent
   }
   // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
